@@ -1,0 +1,38 @@
+{
+  "name": "Character_Sheet",
+  "version": "1.0.0",
+  "description": "This is a test application for a character sheet",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "babel-loader": "^6.2.0",
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-plugin-react-html-attrs": "^2.0.0",
+    "babel-plugin-transform-class-properties": "^6.3.13",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-polyfill": "^6.13.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "flexboxgrid": "^6.3.1",
+    "json-loader": "^0.5.4",
+    "lodash": "^4.15.0",
+    "material-design-icons": "^3.0.0",
+    "material-ui": "^0.15.4",
+    "radium": "^0.18.1",
+    "react": "^15.3.1",
+    "react-amazing-grid": "^1.1.0",
+    "react-bootstrap": "^0.30.1",
+    "react-dom": "15.3.1",
+    "react-flexbox-grid": "^0.10.2",
+    "react-tap-event-plugin": "^1.0.0",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "./node_modules/.bin/webpack-dev-server --content-base src --inline --hot",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James Grow",
+  "license": "ISC"
+}
