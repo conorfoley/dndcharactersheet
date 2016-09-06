@@ -4,7 +4,6 @@ var attributeList = require('json-loader!./AttributeComponents/AttributeList.jso
 
 export default class Attributes extends React.Component{
     render(){
-        var style = this.props.style;
         var attributes = attributeList.map(function(attribute, id){
             return <span key={id + 7} className="attributes-row">
                             <span key={id + 1}>
@@ -14,7 +13,7 @@ export default class Attributes extends React.Component{
                                 key={id + 2}
                                 id={attribute}
                                 style={{width: '60%'}}/>
-                                <p key={id + 3} style={style.smallCenter}>{attribute}</p>
+                                <p key={id + 3} className="smallCenter">{attribute}</p>
                             </span>
                             <span key={id + 4}>
                                 <TextField 
@@ -23,7 +22,7 @@ export default class Attributes extends React.Component{
                                 key={id + 5} 
                                 id={attribute + "-mod"} 
                                 style={{width: '40%'}} />
-                                <p key={id + 6} style={style.smallCenter}>Mod</p>
+                                <p key={id + 6} className="smallCenter">Mod</p>
                             </span>                    
                         </span>
         });

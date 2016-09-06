@@ -24,17 +24,9 @@ export default class RaceAndClass extends React.Component{
                             <RenderRaceDropdown></RenderRaceDropdown>
                         </span>
                         <span className="race-row">
-                            <RenderAlignmentDropdown></RenderAlignmentDropdown>
-                        </span>
-                        <span className="race-row">
-                            <span className="race-item">
-                                <TextField 
-                                    type="text"
-                                    hintText="Level"
-                                    hintStyle={{fontWeight: "800", fontColor: "#0000"}}
-                                    floatingLabelText="Level"
-                                />
-                            </span>
+                            <RenderAlignmentDropdown
+                                setAlignmentColors={this.props.setAlignmentColors}
+                            />
                         </span>
                     </div>
                 </div>

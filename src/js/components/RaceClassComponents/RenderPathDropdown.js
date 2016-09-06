@@ -40,33 +40,47 @@ export default class RenderPathDropdown extends React.Component{
             var key = "Paths";
             var listPaths = this.props.paths.map(function(path,index){
                 return (
-                        <MenuItem key={index} value={index} primaryText={path} />
+                        <MenuItem
+                            key={index}
+                            value={index}
+                            primaryText={path}
+                        />
                     )
 
             });
             return(
                 <div>
-                    <DropDownMenu value={pathValue} onChange={this.handleChange}>
-                        <MenuItem key={pathValue} value={pathValue} primaryText={pathValue}/>
-                            {
-                            listPaths
-                            }
+                    <DropDownMenu
+                        value={pathValue}
+                        onChange={this.handleChange}
+                    >
+                        <MenuItem
+                            key={pathValue}
+                            value={pathValue}
+                            primaryText={pathValue}
+                        />
+                            {listPaths}
                     </DropDownMenu>
                 </div>
             )
         } else {           
             var listPaths = this.props.paths.map(function(path,index){
                 return (
-                        <MenuItem key={index} value={index} primaryText={path}/>
+                        <MenuItem
+                            key={index}
+                            value={index}
+                            primaryText={path}
+                        />
                     )
 
             });
             return(
                 <div>
-                    <DropDownMenu value={this.state.value} onChange={this.handleChange}>
-                            {
-                            listPaths
-                            }
+                    <DropDownMenu
+                        value={this.state.value}
+                        onChange={this.handleChange}
+                    >
+                            {listPaths}
                     </DropDownMenu>
                 </div>
             )

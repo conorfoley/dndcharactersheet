@@ -5,11 +5,19 @@ var _ = require('lodash');
 
 export default class Vitality extends React.Component{
     render(){
-        var style = this.props.style;
         return (
             <div className="vitality-column">
                 <div className="vitality-row">
                     <span>
+                        <TextField 
+                            type="text"
+                            hintText="Level"
+                            hintStyle={{fontWeight: "800", fontColor: "#0000"}}
+                            /*floatingLabelText="Level"*/
+                            style={{width: "20%"}}
+                            inputStyle={{textAlign: "center"}}
+                        />
+                        <br/>
                         (Get rid of current on all of these)<br/>
                         HP: <br/>
                         Fatigue Bar: <br/>
@@ -32,7 +40,7 @@ export default class Vitality extends React.Component{
                                         className="vitality-text"
                                         style={{width: '60%'}}
                                     />
-                                    <p style={style.smallCenter}>HP Max</p>
+                                    <p className="smallCenter">HP Max</p>
                                 </span>
                                 <span className="vitality-item">
                                     <TextField
@@ -42,7 +50,7 @@ export default class Vitality extends React.Component{
                                         className="vitality-text"
                                         style={{width: '60%'}}
                                     />
-                                    <p style={style.smallCenter}>Wounds</p>
+                                    <p className="smallCenter">Wounds</p>
                                 </span>
                                 <span className="vitality-item">
                                     <TextField 
@@ -52,7 +60,7 @@ export default class Vitality extends React.Component{
                                         className="vitality-text"
                                         style={{width: '60%'}}
                                     />
-                                    <p style={style.smallCenter}>Temporary HP</p>
+                                    <p className="smallCenter">Temporary HP</p>
                                 </span>
                             </div>
                         </div>
@@ -69,7 +77,7 @@ export default class Vitality extends React.Component{
                                         className="vitality-text"
                                         style={{width: '60%'}}
                                     />
-                                    <p style={style.smallCenter}>Fatigue Max</p>
+                                    <p className="smallCenter">Fatigue Max</p>
                                 </span>
                                 <span className="vitality-item">
                                     <TextField
@@ -79,7 +87,7 @@ export default class Vitality extends React.Component{
                                         className="vitality-text"
                                         style={{width: '60%'}}
                                     />
-                                    <p style={style.smallCenter}>Fatigue</p>
+                                    <p className="smallCenter">Fatigue</p>
                                 </span>
                                 <span className="vitality-item">
                                     <TextField
@@ -89,7 +97,7 @@ export default class Vitality extends React.Component{
                                         className="vitality-text"
                                         style={{width: '60%'}}
                                     />
-                                    <p style={style.smallCenter}>Levels of Exhaustion</p>
+                                    <p className="smallCenter">Levels of Exhaustion</p>
                                 </span>
                             </div>
                         </div>
@@ -106,7 +114,7 @@ export default class Vitality extends React.Component{
                                         className="vitality-text"
                                         style={{width: '60%'}}
                                     />
-                                    <p style={style.smallCenter}>Stress Max</p>
+                                    <p className="smallCenter">Stress Max</p>
                                 </span>
                                 <span className="vitality-item">
                                     <TextField
@@ -116,7 +124,7 @@ export default class Vitality extends React.Component{
                                         className="vitality-text"
                                         style={{width: '60%'}}
                                     />
-                                    <p style={style.smallCenter}>Stress</p>
+                                    <p className="smallCenter">Stress</p>
                                 </span>
                                 <span className="vitality-item">
                                     <TextField
@@ -126,7 +134,7 @@ export default class Vitality extends React.Component{
                                         className="vitality-text"
                                         style={{width: '60%'}}
                                     />
-                                    <p style={style.smallCenter}>Levels of Insanity</p>
+                                    <p className="smallCenter">Levels of Insanity</p>
                                 </span>
                             </div>
                         </div>

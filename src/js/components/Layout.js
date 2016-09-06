@@ -5,8 +5,6 @@ import Attributes from "./Attributes";
 import Vitality from "./Vitality";
 import RaceAndClass from "./RaceAndClass";
 
-var styles = require("json-loader!./style.json");
-
 export default class Layout extends React.Component {
     constructor(){
         super();
@@ -14,7 +12,6 @@ export default class Layout extends React.Component {
             charname: "Character Name",
             playername: "Player Name",
             alignment: "",
-            style: styles,
         }
     }
     changeTitle(charname){
@@ -26,6 +23,7 @@ export default class Layout extends React.Component {
     setAlignmentColors(alignmentValue){
         this.setState({alignment: alignmentValue});
     }
+
     render(){
         return(
             <div>
@@ -33,7 +31,6 @@ export default class Layout extends React.Component {
                     <div className="flex-row">
                         <div className="flex-container">
                             <CPName
-                                style={this.state.style}
                                 changeTitle={this.changeTitle.bind(this)}
                                 charname={this.state.charname}
                                 changePlayer={this.changePlayer.bind(this)}
@@ -42,11 +39,14 @@ export default class Layout extends React.Component {
                         </div>
                     </div>
                     <div className="flex-row">
-                        <Attributes style={this.state.style} />
+                        <Attributes />
                         <div className="flex-container">
-                            <Vitality style={this.state.style} />
-                            <div className="flex-row">
-                                <RaceAndClass style={this.state.style} />
+                            <Vitality />
+                            <div className="race-inline">
+                                <RaceAndClass
+                                    setAlignmentColors={this.setAlignmentColors}
+
+                                />
                             </div>
                         </div>
                     </div>

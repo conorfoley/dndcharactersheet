@@ -34,6 +34,7 @@ export default class RenderClassDropdown extends React.Component{
         this.setState({resetPath: false});
     }
     render(){
+        console.dir(this.props.children);
         var classes = [];
         var paths = this.state.paths;
     
@@ -42,7 +43,11 @@ export default class RenderClassDropdown extends React.Component{
         });
 
         var listClasses = classes.map(function(someClass,index){
-            return <MenuItem key={index} value={index} primaryText={someClass}/>
+            return <MenuItem
+                        key={index}
+                        value={index}
+                        primaryText={someClass}
+                    />
         });
         
         /*
@@ -65,36 +70,53 @@ export default class RenderClassDropdown extends React.Component{
         if (this.state.value === 0){
             return(
                 <div className="race-item">
-                    <DropDownMenu value={this.state.value} onChange={this.handleChange}>
-                            {
-                            listClasses
-                            }
+                    <DropDownMenu
+                        value={this.state.value}
+                        onChange={this.handleChange}
+                    >
+                            {listClasses}
                     </DropDownMenu>
-                <RenderPathDropdown pathProp={this.state.value} resetPath={true} paths={paths}></RenderPathDropdown>
+                <RenderPathDropdown
+                    pathProp={this.state.value}
+                    resetPath={true}
+                    paths={paths}
+                />
                 </div>
             )
         // If the temporary class value is the same as the state Class value, then they've selected a class but haven't moved off of it yet
         } else if (this.state.value === this.state.tempClass){
             return(
                 <div className="race-item">
-                    <DropDownMenu value={this.state.value} onChange={this.handleChange}>
-                            {
-                            listClasses
-                            }
+                    <DropDownMenu
+                        value={this.state.value}
+                        onChange={this.handleChange}
+                    >
+                            {listClasses}
                     </DropDownMenu>
-                <RenderPathDropdown pathProp={this.state.value} clearPath={this.clearPath.bind(this)} resetPath={this.state.resetPath} paths={paths}></RenderPathDropdown>
+                <RenderPathDropdown
+                    pathProp={this.state.value}
+                    clearPath={this.clearPath.bind(this)}
+                    resetPath={this.state.resetPath}
+                    paths={paths}
+                />
                 </div>
             )
         // Here the temporary class must exist, and if it doesn't equal the current state's value, then they chose a new Class and we need to reset the paths
         } else if (this.state.value !== this.state.tempClass) {
             return(
                 <div className="race-item">
-                    <DropDownMenu value={this.state.value} onChange={this.handleChange}>
-                            {
-                            listClasses
-                            }
+                    <DropDownMenu
+                        value={this.state.value}
+                        onChange={this.handleChange}
+                    >
+                            {listClasses}
                     </DropDownMenu>
-                <RenderPathDropdown pathProp={this.state.value} clearPath={this.clearPath.bind(this)} resetPath={this.state.resetPath} paths={paths}></RenderPathDropdown>
+                <RenderPathDropdown
+                    pathProp={this.state.value}
+                    clearPath={this.clearPath.bind(this)}
+                    resetPath={this.state.resetPath}
+                    paths={paths}
+                />
                 </div>
             )
         }

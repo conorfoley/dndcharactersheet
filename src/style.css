@@ -1,7 +1,11 @@
 body {
-  background-image: url("colored-parchment-paper-2675-free-parchment-paper-texture-1600-x-998.jpg");
+  /*background-image: url("colored-parchment-paper-2675-free-parchment-paper-texture-1600-x-998.jpg");*/
+  background-color: #778899;
   background-attachment: fixed;
-  font-color: #fff;
+  color: #fff;
+}
+b{
+  color: #fff;
 }
 .flex-container {
   display: -webkit-inline-flex; /* Safari */
@@ -10,6 +14,8 @@ body {
   flex-direction: column;
   width: 100%;
   flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 /*  border: 1px solid #a0a; */
 }
 
@@ -159,6 +165,15 @@ body {
   margin: 0;
 }
 
+.race-inline {
+  justify-content: space-between;
+  align-items: stretch;
+  margin-left: 450px;
+  position: relative;
+  margin-top: 24px;
+  right: 0px;
+}
+
 .race-row {
   display: -webkit-inline-flex; /* Safari */
   display: flex;
@@ -187,4 +202,28 @@ body {
   justify-content: space-between;
   align-items: center;
   text-align: right;
+}
+
+.smallCenter {
+  align: center;
+  font-size: small;
+}
+
+.mypadding {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-top: .5px solid #aaa;
+  border-bottom: .5px solid #aaa;
+  border-right: .5px solid #aaa;
+  border-left: .5px solid #aaa;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-right: 5px;
+  margin-left: 0px;
+}
+
+.hidden: {
+  display: none;
 }

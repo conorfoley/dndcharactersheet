@@ -14,5 +14,5 @@
     {"Runemaster" : [ "Trigger", "Sigil", "Sealer" ]},
     {"Sorcerer" : [ "Ancient Power", "Tempest", "Possessed" ]},
     {"Thief" : [ "Infiltrator", "Arcane Trickster", "Duelist" ]},
-    {"Wizard" : [ "Traditionlist", "Conduit", "Commited" ]}
+    {"Wizard" : [ "Traditionalist", "Conduit", "Sage" ]}
  ]
