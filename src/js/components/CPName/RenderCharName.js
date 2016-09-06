@@ -9,10 +9,19 @@ export default class RenderCharName extends React.Component {
         this.state = {
             isEditingChar: true,
             unEdited: true,
+            border: 0,
+            height: "72px",
+            lineHeight: "24px",
+            marginLeft: "120px",
         }
     }
+    dashedBorder(border){
+        this.setState({border: "1px dashed #000"});
+    }
+    clearBorder(border){
+        this.setState({border: "0px"});
+    }
     toggleStateChar(isEditingChar){
-        //console.log(isEditingChar);
         if ( this.state.isEditingChar){
             this.setState({isEditingChar: false});
         } else if (!this.state.isEditingChar) {
@@ -30,25 +39,49 @@ export default class RenderCharName extends React.Component {
         var style = this.props.style;
         if (this.state.unEdited && this.state.isEditingChar){
             return(
-                <div style={style.col2, style.offset2}>
-                    <TextField id="characterName" hintText={this.props.charname} onChange={this.handleChange.bind(this)}/>
-                    &nbsp;
-                    <IconButton onClick={this.toggleStateChar.bind(this)}><i className="material-icons">done</i></IconButton>
+                <div className="cpname-item">
+                    <TextField
+                        id="characterName"
+                        hintText={this.props.charname}
+                        onChange={this.handleChange.bind(this)}
+                        hintStyle={{textAlign: "center"}}
+                        inputStyle={{textAlign: "center", fontWeight: "bold"}}
+                        style={{textAlign: "center"}}
+                        floatingLabelText="Character Name"
+                    />
+                    <IconButton onClick={this.toggleStateChar.bind(this)}>
+                        <i className="material-icons">done</i>
+                    </IconButton>
                 </div>
             );
         } else if (this.state.isEditingChar && !this.state.unEdited){
             return(
-                <div style={style.col2, style.offset2}>
-                    <TextField id="characterName" value={this.props.charname} onChange={this.handleChange.bind(this)}/>
-                    &nbsp;
-                    <IconButton onClick={this.toggleStateChar.bind(this)}><i className="material-icons">done</i></IconButton>
+                <div className="cpname-item">
+                    <TextField 
+                        id="characterName"
+                        value={this.props.charname}
+                        onChange={this.handleChange.bind(this)}
+                        hintStyle={{textAlign: "center"}}
+                        inputStyle={{textAlign: "center", fontWeight: "bold"}}
+                        style={{textAlign: "center"}}
+                        floatingLabelText="Character Name"
+                        
+                    />
+                    <IconButton onClick={this.toggleStateChar.bind(this)}>
+                        <i className="material-icons">done</i>
+                    </IconButton>
                 </div>
             );
         } else {
             return(
-                <div id="characterName" style={style.base} onClick={this.toggleStateChar.bind(this)}>
-                    <b>{this.props.charname}</b>&nbsp;       
-                    <IconButton style={style.hidden}><i className="material-icons">done</i></IconButton>
+                <div 
+                    id="characterName"
+                    style={{border: this.state.border, height: this.state.height, marginLeft: this.state.marginLeft}}
+                    className="cpname-item"
+                    onMouseEnter={this.dashedBorder.bind(this)}
+                    onMouseLeave={this.clearBorder.bind(this)}
+                    onClick={this.toggleStateChar.bind(this)}>
+                        <b>{this.props.charname}</b>
                 </div>
 
             );

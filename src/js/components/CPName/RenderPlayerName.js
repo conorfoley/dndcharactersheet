@@ -9,7 +9,17 @@ export default class RenderPlayerName extends React.Component {
         this.state = {
             isEditingPlayer: true,
             unEdited: true,
+            border: 0,
+            height: "72px",
+            lineHeight: "24px",
+            marginLeft: "120px",
         }
+    }
+    dashedBorder(border){
+        this.setState({border: "1px dashed #000"});
+    }
+    clearBorder(border){
+        this.setState({border: "0px"});
     }
     toggleStatePlayer(isEditingPlayer){
         if ( this.state.isEditingPlayer){
@@ -25,32 +35,56 @@ export default class RenderPlayerName extends React.Component {
         const playername = e.target.value;
         this.props.changePlayer(playername);
     }
-    render(){
+    render() {
         var style = this.props.style;
         if (this.state.unEdited && this.state.isEditingPlayer){
             return(
-                <div style={style.col2, style.offset2}>
-                    <TextField id="playerName" hintText={this.props.playername} onChange={this.handleChangePlayer.bind(this)}/>
-                    &nbsp;
-                    <IconButton onClick={this.toggleStatePlayer.bind(this)}><i className="material-icons">done</i></IconButton>
+                <div className="cpname-item">
+                    <TextField 
+                        id="playerName"
+                        hintText={this.props.playername}
+                        onChange={this.handleChangePlayer.bind(this)}
+                        hintStyle={{textAlign: "center"}}
+                        inputStyle={{textAlign: "center", fontWeight: "bold"}}
+                        style={{textAlign: "center"}}
+                        floatingLabelText="Player Name"
+                    />
+                    <IconButton onClick={this.toggleStatePlayer.bind(this)}>
+                        <i className="material-icons">done</i>
+                    </IconButton>
                 </div>
             );
         } else if (this.state.isEditingPlayer && !this.state.unEdited){
             return(
-                <div style={style.col2, style.offset2}>
-                    <TextField id="playerName" value={this.props.playername} onChange={this.handleChangePlayer.bind(this)}/>
-                    &nbsp;
-                    <IconButton onClick={this.toggleStatePlayer.bind(this)}><i className="material-icons">done</i></IconButton>
+                <div className="cpname-item">
+                    <TextField
+                        id="playerName"
+                        value={this.props.playername}
+                        onChange={this.handleChangePlayer.bind(this)}
+                        hintStyle={{textAlign: "center"}}
+                        inputStyle={{textAlign: "center", fontWeight: "bold"}}
+                        style={{textAlign: "center"}}
+                        floatingLabelText="Player Name"
+                        
+                    />
+                    <IconButton onClick={this.toggleStatePlayer.bind(this)}>
+                        <i className="material-icons">done</i>
+                    </IconButton>
                 </div>
             );
+        } else {
+            return(
+                <div 
+                    id="playerName"
+                    style={{border: this.state.border, height: this.state.height, marginLeft: this.state.marginLeft}}
+                    className="cpname-item"
+                    onMouseEnter={this.dashedBorder.bind(this)}
+                    onMouseLeave={this.clearBorder.bind(this)}
+                    onClick={this.toggleStatePlayer.bind(this)}>
+                        <b>{this.props.playername}</b>
+                </div>
+
+            );
         }
-
-        return(
-            <div id="playerName" style={style.base} onClick={this.toggleStatePlayer.bind(this)}>
-                <b>{this.props.playername}</b>&nbsp;
-                <IconButton style={style.hidden}><i className="material-icons">done</i></IconButton>
-            </div>
-
-        );
     }
 }

@@ -1,166 +1,37 @@
 import React from "react";
-import { FormControl } from "react-bootstrap";
-import {Container, Row, Col} from 'react-amazing-grid';
+import TextField from 'material-ui/TextField';
+var attributeList = require('json-loader!./AttributeComponents/AttributeList.json');
 
 export default class Attributes extends React.Component{
     render(){
         var style = this.props.style;
+        var attributes = attributeList.map(function(attribute, id){
+            return <span key={id + 7} className="attributes-row">
+                            <span key={id + 1}>
+                                <TextField
+                                type="text"
+                                className="attributes-item"
+                                key={id + 2}
+                                id={attribute}
+                                style={{width: '60%'}}/>
+                                <p key={id + 3} style={style.smallCenter}>{attribute}</p>
+                            </span>
+                            <span key={id + 4}>
+                                <TextField 
+                                type="text"
+                                className="attributes-mod"
+                                key={id + 5} 
+                                id={attribute + "-mod"} 
+                                style={{width: '40%'}} />
+                                <p key={id + 6} style={style.smallCenter}>Mod</p>
+                            </span>                    
+                        </span>
+        });
         return (
-            <div>
-                <div style={style.col3}>
-                    <div style={style.col4} style={style.mypadding}>
-                        <FormControl
-                            type="text"
-                            bsSize="small"
-                            />
-                        <p style={style.smallCenter}>Melee</p>
-                    </div>  
-                    <div style={style.col3}>
-                        <FormControl
-                            type="text"
-                            placeholder="  0"
-                            bsSize="small"
-                          />
-                        <p style={style.smallCenter}>Mod</p>
-                    </div>
-                </div>
-                <div style={style.row}>
-                    <div style={style.col4}>
-                        <FormControl
-                            type="text"
-                            bsSize="small"
-                            />
-                        <p style={style.smallCenter}>Ranged</p>
-                    </div>
-                    <div style={style.col4}>
-                        <FormControl
-                            type="text"
-                            placeholder="  0"
-                            bsSize="small"
-                          />
-                        <p style={style.smallCenter}>Mod</p>
-                    </div>
-                </div>
-                <div style={style.row}>
-                    <div style={style.col4}>
-                        <FormControl
-                            type="text"
-                            bsSize="small"
-                            />
-                        <p style={style.smallCenter}>Strength</p>
-                    </div>
-                    <div style={style.col4}>
-                        <FormControl
-                            type="text"
-                            placeholder="  0"
-                            bsSize="small"
-                          />
-                        <p style={style.smallCenter}>Mod</p>
-                    </div>
-                </div>
-                <div style={style.row}>
-                    <div style={style.col4}>
-                        <FormControl
-                            type="text"
-                            bsSize="small"
-                            />
-                        <p style={style.smallCenter}>Dexterity</p>
-                    </div>
-                    <div style={style.col4}>
-                        <FormControl
-                            type="text"
-                            placeholder="  0"
-                            bsSize="small"
-                          />
-                        <p style={style.smallCenter}>Mod</p>
-                    </div>
-                </div>
-                <div style={style.row}>
-                    <div style={style.col4}>
-                        <FormControl
-                            type="text"
-                            bsSize="small"
-                            />
-                        <p style={style.smallCenter}>Constitution</p>
-                    </div>
-                    <div style={style.col4}>
-                        <FormControl
-                            type="text"
-                            placeholder="  0"
-                            bsSize="small"
-                          />
-                        <p style={style.smallCenter}>Mod</p>
-                    </div>
-                </div>
-                <div style={style.row}>
-                    <div style={style.col4}>
-                        <FormControl
-                            type="text"
-                            bsSize="small"
-                            />
-                        <p style={style.smallCenter}>Intelligence</p>
-                    </div>
-                    <div style={style.col4}>
-                        <FormControl
-                            type="text"
-                            placeholder="  0"
-                            bsSize="small"
-                          />
-                        <p style={style.smallCenter}>Mod</p>
-                    </div>
-                </div>
-                <div style={style.row}>
-                    <div style={style.col4}>
-                        <FormControl
-                            type="text"
-                            bsSize="small"
-                            />
-                        <p style={style.smallCenter}>Wisdom</p>
-                    </div>
-                    <div style={style.col4}>
-                        <FormControl
-                            type="text"
-                            placeholder="  0"
-                            bsSize="small"
-                          />
-                        <p style={style.smallCenter}>Mod</p>
-                    </div>
-                </div>
-                <div style={style.row}>
-                    <div style={style.col4}>
-                        <FormControl
-                            type="text"
-                            bsSize="small"
-                            />
-                        <p style={style.smallCenter}>Charisma</p>
-                    </div>
-                    <div style={style.col4}>
-                        <FormControl
-                            type="text"
-                            placeholder="  0"
-                            bsSize="small"
-                          />
-                        <p style={style.smallCenter}>Mod</p>
-                    </div>
-                </div>
-                <div style={style.row}>
-                    <div style={style.col4}>
-                        <FormControl
-                            type="text"
-                            bsSize="small"
-                            />
-                        <p style={style.smallCenter}>Luck</p>
-                    </div>
-                    <div style={style.col4}>
-                        <FormControl
-                            type="text"
-                            placeholder="  0"
-                            bsSize="small"
-                          />
-                        <p style={style.smallCenter}>Mod</p>
-                    </div>
-                </div>
+            <div className="attributes-column">
+                    {attributes}    
             </div>
+ 
         );
     }
 }

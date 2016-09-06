@@ -6,15 +6,22 @@ export default class Title extends React.Component {
         //console.log(this.props);
         var style = this.props.style;
         if(this.props.charname === "Character Name"){
-                return (
-                    <div style={style.title, style.col3, style.offset6}>
-                        <h1><b><p>&nbsp;</p></b></h1>
-                        <br/>
-                    </div>
-                );
-        }else {
+            return (
+                <div className="title">
+                    <h1><b><p>Character Sheet</p></b></h1>
+                    <br/>
+                </div>
+            );
+        }else if(!this.props.charname){
+            return (
+                <div className="title">
+                    <h1><b><p style={{opacity: "0"}}>Character Sheet</p></b></h1>
+                    <br/>
+                </div>
+            );
+        } else {
             return(
-                    <div style={style.col6, style.offset3}>
+                    <div className="title">
                         <h1><b><p>{this.props.charname}</p></b></h1>
                         <br/>
                     </div>
