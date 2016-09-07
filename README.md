@@ -14,4 +14,4 @@ Roadmap:
 - Attributes across the left auto re-arrange based on priority (determined from class/race/etc.)
 - Modifiers are auto-added/calculated based on class/race/specialization/weapons/etc.
 - Users can upload their own avatar
-- Eventually having additional tabs/buttons/navbar across the top for spells, feats, equipment, etc.
+- Eventually include additional tabs/buttons/navbar across the top for spells, feats, equipment, etc.
