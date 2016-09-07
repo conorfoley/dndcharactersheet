@@ -1,8 +1,9 @@
 body {
-  /*background-image: url("colored-parchment-paper-2675-free-parchment-paper-texture-1600-x-998.jpg");*/
+  background-image: url("colored-parchment-paper-2675-free-parchment-paper-texture-1600-x-998.jpg");
   background-color: #778899;
   background-attachment: fixed;
   color: #fff;
+  opacity: .9;
 }
 b{
   color: #fff;
