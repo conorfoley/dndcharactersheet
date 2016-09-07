@@ -34,7 +34,6 @@ export default class RenderClassDropdown extends React.Component{
         this.setState({resetPath: false});
     }
     render(){
-        console.dir(this.props.children);
         var classes = [];
         var paths = this.state.paths;
     

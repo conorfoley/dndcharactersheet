@@ -15,7 +15,7 @@ export default class RenderAlignmentDropdown extends React.Component{
     
     handleChange = (event, index, value) => {
         this.setState({value});
-        this.props.setAlignmentColors(value);
+        this.props.setAlignmentColors(AlignmentList[index]);
     }
 
     render(){

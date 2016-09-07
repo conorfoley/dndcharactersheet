@@ -4,6 +4,8 @@ import CPName from "./CPName";
 import Attributes from "./Attributes";
 import Vitality from "./Vitality";
 import RaceAndClass from "./RaceAndClass";
+var AlignmentColors = require("json-loader!./AlignmentColors/AlignmentColorMapping.json");
+var _ = require('lodash');
 
 export default class Layout extends React.Component {
     constructor(){
@@ -11,7 +13,8 @@ export default class Layout extends React.Component {
         this.state = {
             charname: "Character Name",
             playername: "Player Name",
-            alignment: "",
+            alignment: "0",
+            alignmentColor: "transparent",
         }
     }
     changeTitle(charname){
@@ -20,13 +23,17 @@ export default class Layout extends React.Component {
     changePlayer(playername){
         this.setState({playername});
     }
-    setAlignmentColors(alignmentValue){
-        this.setState({alignment: alignmentValue});
+    setAlignmentColors(alignment){
+        this.setState({alignment});
+        const someVar = _.find(AlignmentColors, alignment);
+        console.dir(_.values(_.find(AlignmentColors, alignment))[0]);
+        this.setState({alignmentColor: _.values(_.find(AlignmentColors, alignment))[0]});
     }
 
     render(){
+        //console.dir(AlignmentColors);
         return(
-            <div>
+            <div style={{backgroundColor: this.state.alignmentColor, transition: "background-color 2s"}} >
                 <div className="flex-container">
                     <div className="flex-row">
                         <div className="flex-container">
@@ -44,7 +51,7 @@ export default class Layout extends React.Component {
                             <Vitality />
                             <div className="race-inline">
                                 <RaceAndClass
-                                    setAlignmentColors={this.setAlignmentColors}
+                                    setAlignmentColors={this.setAlignmentColors.bind(this)}
 
                                 />
                             </div>

@@ -1,0 +1,12 @@
+[
+    {"Alignment": "transparent"},
+    {"Lawful good": "#0000FF"},
+    {"Neutral good": "#F4A460"},
+    {"Chaotic good": "#FFD700"},
+    {"Lawful neutral": "#D3D3D3"},
+    {"(True) neutral": "#D3D3D3"},
+    {"Chaotic neutral": "#D3D3D3"},
+    {"Lawful evil": "#6A5ACD"},
+    {"Neutral evil": "#9370DB"},
+    {"Chaotic evil":"#C71585"}
+]
