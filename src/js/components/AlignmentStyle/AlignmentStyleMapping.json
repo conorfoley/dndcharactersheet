@@ -1,12 +1,12 @@
 [
     {"Alignment":["transparent"]},
-    {"Chaotic Good":["#8B0000","Comic Sans","white"]},
-    {"Lawful Good":["#0000FF","Avant Garde","white"]},
-    {"Neutral Good":["#F4A460","Myriad","white"]},
-    {"Lawful Neutral":["#D3D3D3","Courier","black"]},
-    {"(True) Neutral":["#D3D5F4","Frutiger","black"]},
-    {"Chaotic Neutral":["#D3D1C0","Wingdings","black"]},
-    {"Neutral Evil":["#7B68EE","Helvetica","white"]},
-    {"Lawful Evil":["#BA55D3","Century Gothic","white"]},
-    {"Chaotic Evil":["#DB7093","Lucida Bright","white"]}
+    {"Chaotic Good":["rgba(139, 0, 0, 0.6)","Comic Sans","white"]},
+    {"Lawful Good":["rgba(0, 0, 255, 0.6)","Avant Garde","white"]},
+    {"Neutral Good":["rgba(244, 164, 96, 0.6)","Myriad","white"]},
+    {"Lawful Neutral":["rgba(211, 211, 211, 0.6)","Courier","black"]},
+    {"(True) Neutral":["rgba(211, 213, 244, 0.6)","Frutiger","black"]},
+    {"Chaotic Neutral":["rgba(211, 209, 192, 0.6)","Wingdings","black"]},
+    {"Neutral Evil":["rgba(123, 104, 238, 0.6)","Helvetica","white"]},
+    {"Lawful Evil":["rgba(186, 85, 211, 0.6)","Century Gothic","white"]},
+    {"Chaotic Evil":["rgba(219, 112, 147, .6)","Lucida Bright","white"]}
 ]
