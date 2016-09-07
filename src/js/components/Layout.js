@@ -1,6 +1,6 @@
 import React from "react";
 
-import CPName from "./CPName";
+import CharPlayerName from "./CharPlayerName";
 import Attributes from "./Attributes";
 import Vitality from "./Vitality";
 import RaceAndClass from "./RaceAndClass";
@@ -37,7 +37,7 @@ export default class Layout extends React.Component {
                 <div className="flex-container">
                     <div className="flex-row">
                         <div className="flex-container">
-                            <CPName
+                            <CharPlayerName
                                 changeTitle={this.changeTitle.bind(this)}
                                 charname={this.state.charname}
                                 changePlayer={this.changePlayer.bind(this)}

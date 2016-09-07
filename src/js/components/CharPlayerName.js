@@ -1,16 +1,16 @@
 import React from "react";
 import Title from "./Title";
-import RenderCharName from "./CPName/RenderCharName";
-import RenderPlayerName from "./CPName/RenderPlayerName";
+import RenderCharName from "./CharPlayerName/RenderCharName";
+import RenderPlayerName from "./CharPlayerName/RenderPlayerName";
 
-export default class CPName extends React.Component {
+export default class CharPlayerName extends React.Component {
     render(){
         var style = this.props.style;
         return(
         <div>
         <Title style={style} charname={this.props.charname} />
-            <div className="cpname-row">
-                <span className="cpname-container">                
+            <div className="charplayername-row">
+                <span className="charplayername-container">                
                     <RenderCharName 
                         style={style}
                         changeTitle={this.props.changeTitle} 

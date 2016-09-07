@@ -39,7 +39,7 @@ export default class RenderCharName extends React.Component {
         var style = this.props.style;
         if (this.state.unEdited && this.state.isEditingChar){
             return(
-                <div className="cpname-item">
+                <div className="charplayername-item">
                     <TextField
                         id="characterName"
                         hintText={this.props.charname}
@@ -56,7 +56,7 @@ export default class RenderCharName extends React.Component {
             );
         } else if (this.state.isEditingChar && !this.state.unEdited){
             return(
-                <div className="cpname-item">
+                <div className="charplayername-item">
                     <TextField 
                         id="characterName"
                         value={this.props.charname}
@@ -77,7 +77,7 @@ export default class RenderCharName extends React.Component {
                 <div 
                     id="characterName"
                     style={{border: this.state.border, height: this.state.height, marginLeft: this.state.marginLeft}}
-                    className="cpname-item"
+                    className="charplayername-item"
                     onMouseEnter={this.dashedBorder.bind(this)}
                     onMouseLeave={this.clearBorder.bind(this)}
                     onClick={this.toggleStateChar.bind(this)}>

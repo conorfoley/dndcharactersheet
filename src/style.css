@@ -38,7 +38,7 @@ b{
   justify-content: center;
 }
 
-.cpname-row {
+.charplayername-row {
   display: -webkit-flex; /* Safari */
   display: flex;
   flex-direction: row;
@@ -47,14 +47,14 @@ b{
   width: 100%;
 }
 
-.cpname-container {
+.charplayername-container {
   display: -webkit-inline-flex; /* Safari */
   display: inline-flex;
   align-items: center;
   justify-content: stretch;
 }
 
-.cpname-item {
+.charplayername-item {
   display: -webkit-inline-flex; /* Safari */
   display: inline-flex;
   flex-direction: row;
