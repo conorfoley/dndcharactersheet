@@ -29,4 +29,3 @@ export default class Title extends React.Component {
         }
     }
 }
-

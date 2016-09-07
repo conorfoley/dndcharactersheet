@@ -37,8 +37,8 @@ export default class RenderSubRaceDropdown extends React.Component{
         if (this.props.subRaceProp == 0){
             return (
                 <div>
-                    <DropDownMenu value="Choose a Race" labelStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}>
-                        <MenuItem value="Choose a Race" primaryText="Choose a Race"/>
+                    <DropDownMenu value="Sub Race" labelStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}>
+                        <MenuItem value="Sub Race" primaryText="Sub Race"/>
                     </DropDownMenu>
                 </div>
             )

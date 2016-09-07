@@ -44,8 +44,13 @@ export default class RenderPlayerName extends React.Component {
                         id="playerName"
                         hintText={this.props.playername}
                         onChange={this.handleChangePlayer.bind(this)}
-                        hintStyle={{textAlign: "center", color: this.props.fontColor, fontFamily: this.props.fontFamily}}
-                        inputStyle={{textAlign: "center", fontWeight: "bold"}}
+                        hintStyle={{textAlign: "center",
+                            color: this.props.fontColor,
+                            fontFamily: this.props.fontFamily}}
+                        inputStyle={{textAlign: "center",
+                            color: this.props.fontColor,
+                            fontFamily: this.props.fontFamily,
+                            fontWeight: "bold"}}
                         style={{textAlign: "center"}}
                         floatingLabelText="Player Name"
                         floatingLabelStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}
@@ -62,8 +67,13 @@ export default class RenderPlayerName extends React.Component {
                         id="playerName"
                         value={this.props.playername}
                         onChange={this.handleChangePlayer.bind(this)}
-                        hintStyle={{textAlign: "center", color: this.props.fontColor, fontFamily: this.props.fontFamily}}
-                        inputStyle={{textAlign: "center", fontWeight: "bold"}}
+                        hintStyle={{textAlign: "center",
+                            color: this.props.fontColor,
+                            fontFamily: this.props.fontFamily}}
+                        inputStyle={{textAlign: "center",
+                            color: this.props.fontColor,
+                            fontFamily: this.props.fontFamily,
+                            fontWeight: "bold"}}
                         style={{textAlign: "center"}}
                         floatingLabelText="Player Name"
                         floatingLabelStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}
@@ -77,7 +87,11 @@ export default class RenderPlayerName extends React.Component {
             return(
                 <div 
                     id="playerName"
-                    style={{border: this.state.border, height: this.state.height, marginLeft: this.state.marginLeft}}
+                    style={{border: this.state.border,
+                        color: this.props.fontColor,
+                        fontFamily: this.props.fontFamily,
+                        height: this.state.height,
+                        marginLeft: this.state.marginLeft}}
                     className="charplayername-item"
                     onMouseEnter={this.dashedBorder.bind(this)}
                     onMouseLeave={this.clearBorder.bind(this)}

@@ -5,10 +5,10 @@ import RenderPlayerName from "./CharPlayerName/RenderPlayerName";
 
 export default class CharPlayerName extends React.Component {
     render(){
-        var style = this.props.style;
+        console.dir(this.props);
         return(
         <div>
-        <Title style={style}
+        <Title
             charname={this.props.charname}
             fontColor={this.props.fontColor}
             fontFamily={this.props.fontFamily}
@@ -16,14 +16,12 @@ export default class CharPlayerName extends React.Component {
             <div className="charplayername-row">
                 <span className="charplayername-container">                
                     <RenderCharName 
-                        style={style}
                         changeTitle={this.props.changeTitle} 
                         charname={this.props.charname} 
                         fontColor={this.props.fontColor}
                         fontFamily={this.props.fontFamily}
                     />
                     <RenderPlayerName 
-                        style={style}
                         playername={this.props.playername}
                         changePlayer={this.props.changePlayer.bind(this)}
                         fontColor={this.props.fontColor}

@@ -36,7 +36,7 @@ export default class RenderCharName extends React.Component {
         this.props.changeTitle(charname);
     }
     render() {
-        var style = this.props.style;
+        console.dir(this.props.charname)
         if (this.state.unEdited && this.state.isEditingChar){
             return(
                 <div className="charplayername-item">
@@ -44,8 +44,13 @@ export default class RenderCharName extends React.Component {
                         id="characterName"
                         hintText={this.props.charname}
                         onChange={this.handleChange.bind(this)}
-                        hintStyle={{textAlign: "center", color: this.props.fontColor, fontFamily: this.props.fontFamily}}
-                        inputStyle={{textAlign: "center", fontWeight: "bold"}}
+                        hintStyle={{textAlign: "center",
+                            color: this.props.fontColor,
+                            fontFamily: this.props.fontFamily}}
+                        inputStyle={{textAlign: "center",
+                            color: this.props.fontColor,
+                            fontFamily: this.props.fontFamily,
+                            fontWeight: "bold"}}
                         style={{textAlign: "center"}}
                         floatingLabelText="Character Name"
                         floatingLabelStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}
@@ -62,8 +67,13 @@ export default class RenderCharName extends React.Component {
                         id="characterName"
                         value={this.props.charname}
                         onChange={this.handleChange.bind(this)}
-                        hintStyle={{textAlign: "center", color: this.props.fontColor, fontFamily: this.props.fontFamily}}
-                        inputStyle={{textAlign: "center", fontWeight: "bold"}}
+                        hintStyle={{textAlign: "center",
+                            color: this.props.fontColor,
+                            fontFamily: this.props.fontFamily}}
+                        inputStyle={{textAlign: "center",
+                            color: this.props.fontColor,
+                            fontFamily: this.props.fontFamily,
+                            fontWeight: "bold"}}
                         style={{textAlign: "center"}}
                         floatingLabelText="Character Name"
                         floatingLabelStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}                        
@@ -77,7 +87,7 @@ export default class RenderCharName extends React.Component {
             return(
                 <div 
                     id="characterName"
-                    style={{border: this.state.border, height: this.state.height, marginLeft: this.state.marginLeft}}
+                    style={{border: this.state.border, color: this.props.fontColor, fontFamily: this.props.fontFamily, height: this.state.height, marginLeft: this.state.marginLeft}}
                     className="charplayername-item"
                     onMouseEnter={this.dashedBorder.bind(this)}
                     onMouseLeave={this.clearBorder.bind(this)}

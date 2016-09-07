@@ -30,8 +30,8 @@ export default class RenderPathDropdown extends React.Component{
         if (this.props.pathProp == 0){
             return (
                 <div>
-                    <DropDownMenu value="Choose a Class" labelStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}>
-                        <MenuItem value="Choose a Class" primaryText="Choose a Class"/>
+                    <DropDownMenu value="Paths" labelStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}>
+                        <MenuItem value="Paths" primaryText="Paths"/>
                     </DropDownMenu>
                 </div>
             )

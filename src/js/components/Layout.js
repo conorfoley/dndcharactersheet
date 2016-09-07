@@ -15,8 +15,8 @@ export default class Layout extends React.Component {
             playername: "Player Name",
             alignment: "0",
             alignmentStyle: "transparent",
-            fontFamily: "",
-            fontColor: "",
+            fontFamily: "Roboto, sans-serif",
+            fontColor: "#FFF",
         }
     }
     changeTitle(charname){
