@@ -44,10 +44,11 @@ export default class RenderPlayerName extends React.Component {
                         id="playerName"
                         hintText={this.props.playername}
                         onChange={this.handleChangePlayer.bind(this)}
-                        hintStyle={{textAlign: "center"}}
+                        hintStyle={{textAlign: "center", color: this.props.fontColor, fontFamily: this.props.fontFamily}}
                         inputStyle={{textAlign: "center", fontWeight: "bold"}}
                         style={{textAlign: "center"}}
                         floatingLabelText="Player Name"
+                        floatingLabelStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}
                     />
                     <IconButton onClick={this.toggleStatePlayer.bind(this)}>
                         <i className="material-icons">done</i>
@@ -61,11 +62,11 @@ export default class RenderPlayerName extends React.Component {
                         id="playerName"
                         value={this.props.playername}
                         onChange={this.handleChangePlayer.bind(this)}
-                        hintStyle={{textAlign: "center"}}
+                        hintStyle={{textAlign: "center", color: this.props.fontColor, fontFamily: this.props.fontFamily}}
                         inputStyle={{textAlign: "center", fontWeight: "bold"}}
                         style={{textAlign: "center"}}
                         floatingLabelText="Player Name"
-                        
+                        floatingLabelStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}
                     />
                     <IconButton onClick={this.toggleStatePlayer.bind(this)}>
                         <i className="material-icons">done</i>

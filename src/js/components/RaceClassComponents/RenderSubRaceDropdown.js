@@ -37,7 +37,7 @@ export default class RenderSubRaceDropdown extends React.Component{
         if (this.props.subRaceProp == 0){
             return (
                 <div>
-                    <DropDownMenu value="Choose a Race">
+                    <DropDownMenu value="Choose a Race" labelStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}>
                         <MenuItem value="Choose a Race" primaryText="Choose a Race"/>
                     </DropDownMenu>
                 </div>
@@ -58,13 +58,13 @@ export default class RenderSubRaceDropdown extends React.Component{
             });
             return(
                 <div>
-                    <DropDownMenu value={subRaceValue} onChange={this.handleChange.bind(this)}>
+                    <DropDownMenu value={subRaceValue} onChange={this.handleChange.bind(this)} labelStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}>
                         <MenuItem key={subRaceValue} value={subRaceValue} primaryText={subRaceValue}/>
                             {
                             listSubRaces
                             }
                     </DropDownMenu>
-                    <DropDownMenu value={subRaceValue1} onChange={this.handleChange.bind(this)}>
+                    <DropDownMenu value={subRaceValue1} onChange={this.handleChange.bind(this)} labelStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}>
                         <MenuItem key="Sub Races" value="Sub Races" primaryText="Sub Races"/>
                             {
                             listSubRaces
@@ -83,7 +83,7 @@ export default class RenderSubRaceDropdown extends React.Component{
             });
             return(
                 <div>
-                    <DropDownMenu value={subRaceValue} onChange={this.handleChange}>
+                    <DropDownMenu value={subRaceValue} onChange={this.handleChange} labelStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}>
                         <MenuItem key={subRaceValue} value={subRaceValue} primaryText={subRaceValue}/>
                             {
                             listSubRaces
@@ -100,7 +100,7 @@ export default class RenderSubRaceDropdown extends React.Component{
             });
             return(
                 <div>
-                    <DropDownMenu value={this.state.value} onChange={this.handleChange}>
+                    <DropDownMenu value={this.state.value} onChange={this.handleChange} labelStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}>
                             {
                             listSubRaces
                             }
@@ -110,25 +110,3 @@ export default class RenderSubRaceDropdown extends React.Component{
         }
     }
 }
-
-/*
-import React from "react";
-import RenderSubRaceList from "./RenderLists/RenderSubRaceList";
-
-export default class RenderSubRaceDropdown extends React.Component{
-    render(){
-        var style = this.props.style;
-        return(
-            <div>Sub-Race (Dominate)
-                <div className="dropdown">
-                    <span>
-
-                        <RenderSubRaceList></RenderSubRaceList>
-
-
-                    </span>
-                </div>
-            </div>
-            )
-    }
-}*/

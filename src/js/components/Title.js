@@ -19,9 +19,9 @@ export default class Title extends React.Component {
                     <br/>
                 </div>
             );
-        } else {
+        } else if (this.props.fontColor && this.props.fontFamily){
             return(
-                    <div className="title">
+                    <div className="title" style={{color: this.props.fontColor, fontFamily: this.props.fontFamily}} >
                         <h1><b><p>{this.props.charname}</p></b></h1>
                         <br/>
                     </div>

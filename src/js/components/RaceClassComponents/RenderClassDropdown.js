@@ -34,6 +34,7 @@ export default class RenderClassDropdown extends React.Component{
         this.setState({resetPath: false});
     }
     render(){
+        console.dir(this.props.fontColor)
         var classes = [];
         var paths = this.state.paths;
     
@@ -72,6 +73,7 @@ export default class RenderClassDropdown extends React.Component{
                     <DropDownMenu
                         value={this.state.value}
                         onChange={this.handleChange}
+                        labelStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}
                     >
                             {listClasses}
                     </DropDownMenu>
@@ -79,6 +81,8 @@ export default class RenderClassDropdown extends React.Component{
                     pathProp={this.state.value}
                     resetPath={true}
                     paths={paths}
+                    fontColor={this.props.fontColor}
+                    fontFamily={this.props.fontFamily}
                 />
                 </div>
             )
@@ -89,6 +93,7 @@ export default class RenderClassDropdown extends React.Component{
                     <DropDownMenu
                         value={this.state.value}
                         onChange={this.handleChange}
+                        labelStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}
                     >
                             {listClasses}
                     </DropDownMenu>
@@ -97,6 +102,8 @@ export default class RenderClassDropdown extends React.Component{
                     clearPath={this.clearPath.bind(this)}
                     resetPath={this.state.resetPath}
                     paths={paths}
+                    fontColor={this.props.fontColor}
+                    fontFamily={this.props.fontFamily}
                 />
                 </div>
             )
@@ -107,6 +114,7 @@ export default class RenderClassDropdown extends React.Component{
                     <DropDownMenu
                         value={this.state.value}
                         onChange={this.handleChange}
+                        labelStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}
                     >
                             {listClasses}
                     </DropDownMenu>
@@ -115,6 +123,8 @@ export default class RenderClassDropdown extends React.Component{
                     clearPath={this.clearPath.bind(this)}
                     resetPath={this.state.resetPath}
                     paths={paths}
+                    fontColor={this.props.fontColor}
+                    fontFamily={this.props.fontFamily}
                 />
                 </div>
             )

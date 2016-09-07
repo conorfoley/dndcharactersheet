@@ -13,6 +13,8 @@ export default class CultureExperience extends React.Component{
                         inputStyle={{textAlign: "center", fontWeight: "bold"}}
                         hintText="Culture"
                         floatingLabelText="Culture"
+                        hintStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}
+                        floatingLabelStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}
                     />
                 </div>
                 <div className="race-text">
@@ -21,6 +23,8 @@ export default class CultureExperience extends React.Component{
                         inputStyle={{textAlign: "center", fontWeight: "bold"}}
                         hintText="Experience"
                         floatingLabelText="Experience"
+                        hintStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}
+                        floatingLabelStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}
                     />
                 </div>
             </div>

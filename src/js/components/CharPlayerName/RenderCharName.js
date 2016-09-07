@@ -44,10 +44,11 @@ export default class RenderCharName extends React.Component {
                         id="characterName"
                         hintText={this.props.charname}
                         onChange={this.handleChange.bind(this)}
-                        hintStyle={{textAlign: "center"}}
+                        hintStyle={{textAlign: "center", color: this.props.fontColor, fontFamily: this.props.fontFamily}}
                         inputStyle={{textAlign: "center", fontWeight: "bold"}}
                         style={{textAlign: "center"}}
                         floatingLabelText="Character Name"
+                        floatingLabelStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}
                     />
                     <IconButton onClick={this.toggleStateChar.bind(this)}>
                         <i className="material-icons">done</i>
@@ -61,11 +62,11 @@ export default class RenderCharName extends React.Component {
                         id="characterName"
                         value={this.props.charname}
                         onChange={this.handleChange.bind(this)}
-                        hintStyle={{textAlign: "center"}}
+                        hintStyle={{textAlign: "center", color: this.props.fontColor, fontFamily: this.props.fontFamily}}
                         inputStyle={{textAlign: "center", fontWeight: "bold"}}
                         style={{textAlign: "center"}}
                         floatingLabelText="Character Name"
-                        
+                        floatingLabelStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}                        
                     />
                     <IconButton onClick={this.toggleStateChar.bind(this)}>
                         <i className="material-icons">done</i>

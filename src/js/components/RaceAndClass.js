@@ -10,22 +10,32 @@ import TextField from 'material-ui/TextField';
 
 export default class RaceAndClass extends React.Component{
     render(){
-        var style = this.props.style;
         return(
                 <div>
                     <div className="race-column">
                         <span className="race-row">
-                            <RenderClassDropdown></RenderClassDropdown>
+                            <RenderClassDropdown
+                                fontColor={this.props.fontColor}
+                                fontFamily={this.props.fontFamily}
+                            />
                         </span>
                         <span className="race-row">
-                            <CultureExperience></CultureExperience>
+                            <CultureExperience
+                                fontColor={this.props.fontColor}
+                                fontFamily={this.props.fontFamily}
+                            />
                         </span>
                         <span className="race-row">
-                            <RenderRaceDropdown></RenderRaceDropdown>
+                            <RenderRaceDropdown
+                                fontColor={this.props.fontColor}
+                                fontFamily={this.props.fontFamily}
+                            />
                         </span>
                         <span className="race-row">
                             <RenderAlignmentDropdown
-                                setAlignmentColors={this.props.setAlignmentColors}
+                                setAlignmentStyle={this.props.setAlignmentStyle}
+                                fontColor={this.props.fontColor}
+                                fontFamily={this.props.fontFamily}
                             />
                         </span>
                     </div>

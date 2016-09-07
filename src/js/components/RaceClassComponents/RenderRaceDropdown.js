@@ -73,6 +73,7 @@ export default class RenderRaceDropdown extends React.Component{
                     <DropDownMenu
                         value={this.state.value}
                         onChange={this.handleChange}
+                        labelStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}
                     >
                             {
                             listRaces
@@ -82,6 +83,8 @@ export default class RenderRaceDropdown extends React.Component{
                     subRaceProp={this.state.value}
                     resetSubRace={true}
                     subRaces={subRaces}
+                    fontColor={this.props.fontColor}
+                    fontFamily={this.props.fontFamily}
                 />
                 </div>
             )
@@ -94,6 +97,7 @@ export default class RenderRaceDropdown extends React.Component{
                 <DropDownMenu
                     value={this.state.value}
                     onChange={this.handleChange}
+                    labelStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}
                 >
                     {
                     listRaces
@@ -105,6 +109,8 @@ export default class RenderRaceDropdown extends React.Component{
                     resetSubRace={this.state.resetSubRace}
                     subRaces={subRaces}
                     halfRaceFunction={this.halfRaceFunction.bind(this)}
+                    fontColor={this.props.fontColor}
+                    fontFamily={this.props.fontFamily}
                 />
                 <RenderSubRaceDropdown
                     subRaceProp={this.state.value}
@@ -112,6 +118,8 @@ export default class RenderRaceDropdown extends React.Component{
                     resetSubRace={this.state.resetSubRace}
                     subRaces={subRaces}
                     halfRaceFunction={this.halfRaceFunction.bind(this)}
+                    fontColor={this.props.fontColor}
+                    fontFamily={this.props.fontFamily}
                 />
             </div>
             );
@@ -125,6 +133,7 @@ export default class RenderRaceDropdown extends React.Component{
                     <DropDownMenu
                         value={this.state.value}
                         onChange={this.handleChange}
+                        labelStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}
                     >
                             {
                             listRaces
@@ -135,6 +144,8 @@ export default class RenderRaceDropdown extends React.Component{
                     clearSubRace={this.clearSubRace.bind(this)}
                     resetSubRace={this.state.resetSubRace}
                     subRaces={subRaces}
+                    fontColor={this.props.fontColor}
+                    fontFamily={this.props.fontFamily}
                 />
                 </div>
             )
@@ -145,7 +156,11 @@ export default class RenderRaceDropdown extends React.Component{
         } else if (this.state.value !== this.state.tempClass) {
             return(
                 <div className="race-item">
-                    <DropDownMenu value={this.state.value} onChange={this.handleChange}>
+                    <DropDownMenu 
+                        value={this.state.value}
+                        onChange={this.handleChange}
+                        labelStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}
+                    >
                             {
                             listRaces
                             }
@@ -155,6 +170,8 @@ export default class RenderRaceDropdown extends React.Component{
                     clearSubRace={this.clearSubRace.bind(this)}
                     resetSubRace={this.state.resetSubRace}
                     subRaces={subRaces}
+                    fontColor={this.props.fontColor}
+                    fontFamily={this.props.fontFamily}
                 />
                 </div>
             )

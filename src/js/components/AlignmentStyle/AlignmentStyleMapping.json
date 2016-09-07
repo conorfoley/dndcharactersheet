@@ -1,0 +1,12 @@
+[
+    {"Alignment":["transparent"]},
+    {"Chaotic Good":["#8B0000","Comic Sans","white"]},
+    {"Lawful Good":["#0000FF","Avant Garde","white"]},
+    {"Neutral Good":["#F4A460","Myriad","white"]},
+    {"Lawful Neutral":["#D3D3D3","Courier","black"]},
+    {"(True) Neutral":["#D3D5F4","Frutiger","black"]},
+    {"Chaotic Neutral":["#D3D1C0","Wingdings","black"]},
+    {"Neutral Evil":["#7B68EE","Helvetica","white"]},
+    {"Lawful Evil":["#BA55D3","Century Gothic","white"]},
+    {"Chaotic Evil":["#DB7093","Lucida Bright","white"]}
+]

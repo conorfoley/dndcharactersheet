@@ -16,6 +16,8 @@ export default class Vitality extends React.Component{
                             /*floatingLabelText="Level"*/
                             style={{width: "20%"}}
                             inputStyle={{textAlign: "center"}}
+                            hintStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}
+                            floatingLabelStyle={{color: this.props.fontColor, fontFamily: this.props.fontFamily}}
                         />
                         <br/>
                         (Get rid of current on all of these)<br/>

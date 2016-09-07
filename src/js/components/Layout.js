@@ -4,7 +4,7 @@ import CharPlayerName from "./CharPlayerName";
 import Attributes from "./Attributes";
 import Vitality from "./Vitality";
 import RaceAndClass from "./RaceAndClass";
-var AlignmentColors = require("json-loader!./AlignmentColors/AlignmentColorMapping.json");
+var AlignmentStyle = require("json-loader!./AlignmentStyle/AlignmentStyleMapping.json");
 var _ = require('lodash');
 
 export default class Layout extends React.Component {
@@ -14,7 +14,9 @@ export default class Layout extends React.Component {
             charname: "Character Name",
             playername: "Player Name",
             alignment: "0",
-            alignmentColor: "transparent",
+            alignmentStyle: "transparent",
+            fontFamily: "",
+            fontColor: "",
         }
     }
     changeTitle(charname){
@@ -23,17 +25,35 @@ export default class Layout extends React.Component {
     changePlayer(playername){
         this.setState({playername});
     }
-    setAlignmentColors(alignment){
+    setAlignmentStyle(alignment){
         this.setState({alignment});
-        const someVar = _.find(AlignmentColors, alignment);
-        console.dir(_.values(_.find(AlignmentColors, alignment))[0]);
-        this.setState({alignmentColor: _.values(_.find(AlignmentColors, alignment))[0]});
+        console.dir(alignment);
+        const someVar = _.find(AlignmentStyle, alignment);
+        console.dir(_.values(_.find(AlignmentStyle, alignment))[0]);
+        if ( _.values(_.find(AlignmentStyle, alignment))[0].length > 2 ){
+            this.setState({fontFamily: _.values(_.find(AlignmentStyle, alignment))[0][1]});
+            this.setState({alignmentStyle: _.values(_.find(AlignmentStyle, alignment))[0][0]});
+            this.setState({fontColor: _.values(_.find(AlignmentStyle, alignment))[0][2]});
+        } else if ( _.values(_.find(AlignmentStyle, alignment))[0].length > 1 ){
+            this.setState({fontFamily: _.values(_.find(AlignmentStyle, alignment))[0][1]});
+            this.setState({alignmentStyle: _.values(_.find(AlignmentStyle, alignment))[0][0]});
+            console.dir(_.values(_.find(AlignmentStyle, alignment))[0][1]);
+
+        } else {
+            this.setState({alignmentStyle: _.values(_.find(AlignmentStyle, alignment))[0]});
+        }
     }
 
     render(){
-        //console.dir(AlignmentColors);
+
         return(
-            <div style={{backgroundColor: this.state.alignmentColor, transition: "background-color 2s"}} >
+            <div 
+                style={{
+                    backgroundColor: this.state.alignmentStyle,
+                    transition: "background-color 3s",
+                    fontFamily: this.state.fontFamily,
+                    color: this.state.fontColor
+            }}>
                 <div className="flex-container">
                     <div className="flex-row">
                         <div className="flex-container">
@@ -42,16 +62,23 @@ export default class Layout extends React.Component {
                                 charname={this.state.charname}
                                 changePlayer={this.changePlayer.bind(this)}
                                 playername={this.state.playername}
+                                fontColor={this.state.fontColor}
+                                fontFamily={this.state.fontFamily}
                             />
                         </div>
                     </div>
                     <div className="flex-row">
                         <Attributes />
                         <div className="flex-container">
-                            <Vitality />
+                            <Vitality
+                                fontColor={this.state.fontColor}
+                                fontFamily={this.state.fontFamily}
+                            />
                             <div className="race-inline">
                                 <RaceAndClass
-                                    setAlignmentColors={this.setAlignmentColors.bind(this)}
+                                    setAlignmentStyle={this.setAlignmentStyle.bind(this)}
+                                    fontColor={this.state.fontColor}
+                                    fontFamily={this.state.fontFamily}
 
                                 />
                             </div>
