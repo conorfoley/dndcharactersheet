@@ -1,1 +1,10 @@
-[ {"Race": "Select a Race"}, {"Dwarf": ["Jarnhver", "Sverjar", "Svifjol", "Syar"]}, {"Elf": ["Aluin", "Asirian", "Drow", "Elantair"]}, {"Gnome": ["Sintirtti", "Sjanvare", "Strya", "Varjk"]}, {"Halfling": ["Test1", "Test2"]}, {"Half Race": ["Dwarf", "Elf", "Gnome", "Human", "Orc", "Halfling", "Cambion", "Nephilim", "Scalin"]}, {"Human": ["Amaurean", "Anulon", "Harven", "Kalirien"]}, {"Orc": ["Test1", "Test2"]}  ]
+[
+  {"Race": "Select a Race"},
+  {"Dwarf": ["Hill Dwarf", "Mountain Dwarf" ]},
+  {"Elf": ["High Elf", "Wood Elf", "Drow" ]},
+  {"Gnome": ["Forest Gnome", "Rock Gnome" ]},
+  {"Halfling": ["Lightfoot", "Stout" ]},
+  {"Human": ["Calashite", "Chondathan", "Damaran", "Illuskan", "Mulan", "Rashemi", "Shou", "Tethyrian", "Turami" ]},
+  {"Dragonborn" : ["Black", "Blue", "Brass", "Bronze", "Copper", "Gold", "Green", "Red", "Silver", "White" ]},
+  {"Half Races": ["Half-Orc", "Half-Elf", "Tiefling" ]}
+]

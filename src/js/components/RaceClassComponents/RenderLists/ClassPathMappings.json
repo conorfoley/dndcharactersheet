@@ -1,18 +1,15 @@
-[ 
+[
     {"Class" : [ "Path" ]},
-    {"Assassin" : ["Prowler", "Sniper", "Nightmare" ]},
-    {"Barbarian" : ["Berserker", "Skald", "Wildling" ]},
-    {"Bard" : ["Conductor", "Preformer", "Chanter" ]},
-    {"Cleric" : [ "Cultist", "Martyr", "Prophet" ]},
-    {"Druid" : [ "Feral Warrior", "Nature Walker", "Skin Changer" ]},
-    {"Fighter" : [ "Mercenary", "Gladiator", "Spellsword"]},
-    {"Metamind" : [ "Ghost", "Psychic", "Pupperteer" ]},
-    {"Metaphysical" : [ "Dancer", "Juggernaunt", "Ghost" ]},
-    {"Monk" : [ "Chakra", "Martial Artist", "Ninja" ]},
-    {"Paladin" : [ "Crusader", "Zealot", "Harbinger" ]},
-    {"Ranger" : [ "Arcane Archer", "Hunter", "Trapper" ]},
-    {"Runemaster" : [ "Trigger", "Sigil", "Sealer" ]},
-    {"Sorcerer" : [ "Ancient Power", "Tempest", "Possessed" ]},
-    {"Thief" : [ "Infiltrator", "Arcane Trickster", "Duelist" ]},
-    {"Wizard" : [ "Traditionalist", "Conduit", "Sage" ]}
+    {"Barbarian" : ["Berserker", "Totem Warrior" ]},
+    {"Bard" : ["College of Lore", "College of Valor" ]},
+    {"Cleric" : ["Knowledge Domain", "Life Domain", "Light Domain" ]},
+    {"Druid" : ["Circle of the Land", "Circle of the Moon" ]},
+    {"Fighter" : [ "Champion", "Battlemaster", "Eldritch Knight" ]},
+    {"Monk" : [ "Way of the Open Hand", "Way of Shadow", "Way of the Four Elements" ]},
+    {"Paladin" : [ "Oath of Devotion", "Oath of the Ancients", "Oath of Vengeance" ]},
+    {"Ranger" : [ "Beast Master", "Hunter" ]},
+    {"Rogue" : ["Thief", "Assassin", "Arcane Trickster" ]},
+    {"Sorcerer" : [ "Draconic Bloodline", "Wild Magic" ]},
+    {"Warlock" : ["Archfey", "The Fiend", "The Great Old One" ]},
+    {"Wizard" : ["Abjuration", "Conjuration", "Divination", "Enchantment", "Evocation", "Illusion", "Necromancy", "Transmutation" ]}
  ]

@@ -1,11 +1,8 @@
 [
-    "Melee",
-    "Ranged",
     "Strength",
     "Dexterity",
     "Constitution",
     "Intelligence",
     "Wisdom",
-    "Charisma",
-    "Luck"
+    "Charisma"
 ]
